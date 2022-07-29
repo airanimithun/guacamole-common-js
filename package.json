@@ -1,6 +1,6 @@
 {
-  "name": "guacamole-common-js",
-  "version": "1.4.0-a",
+  "name": "guacamole-common-custom-js",
+  "version": "1.4.0-a-1",
   "description": "The Guacamole javascript client",
   "main": "dist/guacamole-common.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/padarom/guacamole-common-js.git"
+    "url": "git+https://github.com/airanimithun/guacamole-common-js.git"
   },
   "files": [
     "dist",
@@ -26,12 +26,12 @@
     "ssh",
     "telnet"
   ],
-  "author": "Christopher Mühl <christopher@padarom.io>",
+  "author": "Mithun A S",
   "license": "Apache 2.0",
   "bugs": {
     "url": "https://issues.apache.org/jira/browse/GUACAMOLE/"
   },
-  "homepage": "https://github.com/padarom/guacamole-common-js#readme",
+  "homepage": "https://github.com/airanimithun/guacamole-common-js#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",

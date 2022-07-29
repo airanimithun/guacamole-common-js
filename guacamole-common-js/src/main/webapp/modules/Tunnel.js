@@ -1102,6 +1102,17 @@ Guacamole.WebSocketTunnel = function(tunnelURL) {
 
                     }
 
+                    if(opcode === "getCredentials") {
+                        var credEvent = new CustomEvent("getAuthCredentials");
+                        document.dispatchEvent(credEvent);
+                    }
+                    if(opcode === "reauth") {
+                        close_tunnel(new Guacamole.Status(Guacamole.Status.Code.UPSTREAM_TIMEOUT,"Server timeout."));
+                        alert("Session Timed out. Please login again.");
+                        window.onbeforeunload=null;
+                        window.location.reload();
+                    }
+
                     // Call instruction handler.
                     if (opcode !== Guacamole.Tunnel.INTERNAL_DATA_OPCODE && tunnel.oninstruction)
                         tunnel.oninstruction(opcode, elements);
